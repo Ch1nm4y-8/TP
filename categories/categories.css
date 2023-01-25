@@ -1,0 +1,80 @@
+:root {
+    font-size: 20px;
+    box-sizing: inherit;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  p:not(:last-child) {
+    margin-bottom: -0.3em;
+  }
+  
+  body {
+    font: 1em/1.618 Inter, sans-serif;
+  
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 100vh;
+    padding: 30px;
+    
+    /* color: #224; */
+    color: rgb(0, 0, 0);
+    background:
+      url(./5.png)
+    /* url(https://dl.dropbox.com/s/mpmu0gjtxv2x3fs/Webp.net-resizeimage%20%281%29.jpg?raw=1)  */
+      center / cover no-repeat fixed;
+  }
+  
+  .card {
+    max-width: 300px;
+    min-height: 105px;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 35px;
+    max-width: 900px;
+    height: 110px;
+    max-height: 110px;
+    padding: 35px;
+  
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 50);
+    backdrop-filter: blur(4px);
+  }
+  
+  .card-footer {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);  
+  }
+
+  a:link, a:visited {
+    background-color: transparent;
+    color: black;
+    border: 2px solid #062D68;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding: 1px 6px;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: #062D68;
+    
+    color: rgb(255, 255, 255);
+  }
+
