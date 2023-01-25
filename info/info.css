@@ -1,0 +1,73 @@
+:root {
+    font-size: 20px;
+    box-sizing: inherit;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  p:not(:last-child) {
+    margin-bottom: 0.7em;
+  }
+  
+  body {
+    font: 1em/1.618 Inter, sans-serif;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 100vh;
+    padding: 30px;
+    
+    /* color: #224; */
+    color: rgb(0, 0, 0);
+    background:
+      url(./5.png)
+    /* url(https://dl.dropbox.com/s/mpmu0gjtxv2x3fs/Webp.net-resizeimage%20%281%29.jpg?raw=1)  */
+      center / cover no-repeat fixed;
+  }
+  
+  .card {
+    min-width: 650px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  
+    max-width: 950px;
+    max-height: 2000px;
+    padding: 35px;
+  
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 50);
+    backdrop-filter: blur(4px);
+  }
+  
+
+   h1{
+    color : rgb(255, 255, 255);
+    font-size: 15px;
+    
+  }
+
+  h1 strong{
+    color :white;
+    font-size: 40px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+  }
+  
+  p {
+    word-wrap: break-word;
+  }
+
