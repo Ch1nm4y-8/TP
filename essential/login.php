@@ -19,11 +19,12 @@
             session_start();
             $_SESSION['usn']=$usn;
             $_SESSION["loggedin"]=true;
+            $_SESSION["rightpassword"]=true;
             header("location: ../index.php");
         }
         else{
             session_start();
-            $_SESSION["loggedin"]=false;
+            $_SESSION['wrongpassword']=true;
             header("location: ../index.php");
         }
 
