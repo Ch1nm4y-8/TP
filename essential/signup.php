@@ -1,3 +1,6 @@
+
+
+
 <?php
     require 'dbconnect.php';
 
@@ -14,13 +17,13 @@
             echo $query;
             $result  = mysqli_query( $conn , $query );
 
-            if($result){
+            // if($result){
 
-                echo "inserted successfully";
-            }
-            else{
-                echo "could not insert";
-            }
+            //     echo "inserted successfully";
+            // }
+            // else{
+            //     echo "could not insert";
+            // }
         }
         else{
             echo "enter same passwords.";
