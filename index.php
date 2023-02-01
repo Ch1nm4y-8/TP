@@ -1,10 +1,17 @@
 <?php
 require './essential/dbconnect.php';
 
-if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-    $loggedini = True;
-}
-$loggedini = false;
+session_start();
+
+
+ if(isset($_SESSION['loggedin'])){
+    if($_SESSION['loggedin']==true){
+        $loggedini = true;
+    }
+ }
+ else{
+    $loggedini = false;
+ }
 ?>
 
 <!DOCTYPE html>
@@ -61,20 +68,26 @@ $loggedini = false;
         <!-- php starts here -->
         <div>
             <?php
-                    session_start();
-                    if(isset($_SESSION['loggedin'])){
-                        if($_SESSION['loggedin']=="true"){
+                    //session_start();
+                    if(isset($_SESSION['rightpassword'])){
+                        if($_SESSION['rightpassword']=="true"){
                         
                           echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                       <strong>Hi '. $_SESSION['usn'] .' </strong>  You logged in successfully
                                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                  </div>';
+                            $_SESSION['rightpassword']=false;
                         }
-                        else{
+
+                    }
+
+                    if(isset($_SESSION['wrongpassword'])){
+                        if($_SESSION['wrongpassword']=="true"){
                             echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <strong>Incorrect credentials </strong>  You Shouldnt be here!!!
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
+                            $_SESSION['wrongpassword']=false;
                         }
                     }
 
